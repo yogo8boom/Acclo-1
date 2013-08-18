@@ -56,13 +56,13 @@
                             'Acceleration Z: ' + acceleration.z         + '<br />' +
                             'Timestamp: '      + acceleration.timestamp + '<br />';
         if(acceleration.x >= 5){
-          $('#show').html('LEFT')
+          $('#img1').css('height:90px;')
         }
         if(acceleration.x <= -5){
-          $('#show').html('Right')
+          $('#img3').css('height:90px;')
         }
         if(acceleration.z <= -5){
-          $('#show').html('Hookup')
+          $('#img2').css('height:90px;')
         }
         
     }
@@ -82,10 +82,11 @@
   </head>
   <body>
     <div id="accelerometer">Waiting for accelerometer...</div>
-    <div id="show" style="position:fixed; button:10px">
-      <img src="cursor1.png" >
-      <img src="hook.png" >
-      <img src="cursor2.png" >
+    <div id="score" ><h3>Score</h3><h2>999</h2></div>
+    <div id="show" style="position:fixed; button:10px; height:100px; ">
+      <img id="img1" src="cursor1.png" >
+      <img id="img2" src="hook.png" >
+      <img id="img3" src="cursor2.png" >
     </div>
     
   </body>
