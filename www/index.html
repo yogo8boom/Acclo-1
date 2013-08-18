@@ -55,19 +55,19 @@
                             'Acceleration Z: ' + acceleration.z + '<br />' +
                             'Timestamp: ' + acceleration.timestamp + '<br />';
         if(acceleration.x >= 5){
-          $('#img1').css('height:80px;')
-		  $('#img3').css('height:90px;')
-		  $('#img2').css('height:90px;')
+          $('#img1').css('height', '80px;')
+		  $('#img3').css('height' ,'90px;')
+		  $('#img2').css('heigh','90px;')
 		}
         if(acceleration.x <= -5){
-          $('#img3').css('height:80px;')
-		  $('#img1').css('height:90px;')
-		  $('#img2').css('height:90px;')
+          $('#img3').css('height','80px;')
+		  $('#img1').css('height','90px;')
+		  $('#img2').css('height','90px;')
         }
         if(acceleration.z <= -4){
-          $('#img2').css('height:80px;')
-		  $('#img1').css('height:90px;')
-		  $('#img3').css('height:90px;')
+          $('#img2').css('height','80px;')
+		  $('#img1').css('height','90px;')
+		  $('#img3').css('height','90px;')
         }
     }
     // onError: Failed to get the acceleration
@@ -93,6 +93,8 @@
       }
 	  .imag{
 		height:90px;
+		margin-left: auto;
+  		margin-right: auto;
 	  }
       
     </style>
