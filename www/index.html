@@ -78,6 +78,9 @@
 
     $(document).ready(function() {
       alert('hi! turn on Accelerometer');
+      var poimo = $('#immo1').position();
+		$('p').html(poimo);
+      
     });
 
     </script>
@@ -121,7 +124,7 @@
 	height:600px;" 
 	scrollamount="20" 
 	direction="down">
-	<img src="cursor1.png"   height="90">
+	<img src="cursor1.png"   height="80">
      </marquee>
     
     <div id="show" >
@@ -129,6 +132,7 @@
       <img id="img2"  src="hook.png" >
       <img id="img3"  src="cursor2.png" >
     </div>
+    <p></p>
     
     
   </body>
