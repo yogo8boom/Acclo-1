@@ -56,18 +56,18 @@
                             'Timestamp: ' + acceleration.timestamp + '<br />';
         if(acceleration.x >= 5){
           $('#img1').css('height', '80')
-		  $('#img3').css('height' ,'90')
-		  $('#img2').css('heigh','90')
-		}
+$('#img3').css('height' ,'90')
+$('#img2').css('heigh','90')
+}
         if(acceleration.x <= -5){
           $('#img3').css('height','80')
-		  $('#img1').css('height','90')
-		  $('#img2').css('height','90')
+$('#img1').css('height','90')
+$('#img2').css('height','90')
         }
         if(acceleration.z <= -4){
           $('#img2').css('height','80')
-		  $('#img1').css('height','90')
-		  $('#img3').css('height','90')
+$('#img1').css('height','90')
+$('#img3').css('height','90')
         }
     }
     // onError: Failed to get the acceleration
@@ -79,62 +79,88 @@
     $(document).ready(function() {
       alert('hi! turn on Accelerometer');
       var poimo = $('#immo1').position();
-		$('p').html(poimo);
+$('p').html(poimo);
       
     });
 
     </script>
     <style>
       #show {
-        margin-left: 7%;
-	margin-right: 7%;
+        margin-left: 7px;
+		margin-right: 7px;
         position:fixed;
         bottom:10px;
       }
       #score{
         float:left;
       }
-     
      #img1{
-	height:90px;
-	}
+		height:90px;
+		}
      #img2{
-	height:90px;
-	}
+		height:90px;
+		}
      #img3{
-	height:90px;
-	}
-	  
+		height:90px;
+		}
+
       
     </style>
   </head>
   <body>
     <div id="accelerometer">Waiting for accelerometer...</div>
     <div id="score" ><div><h3 style="width:30px">Score</h3></div><div><h2 style="width:30px" >999</h2></div></div>
-    
-    <marquee 
-	style="z-index:2;
-	position:absolute;
-	left:49px;
-	top:4px;
-	font-family:
-	Cursive;
-	font-size:14pt;
-	color:##ffcc00;
-	height:600px;" 
-	scrollamount="20" 
-	direction="down">
-	<img src="cursor1.png"   height="80">
+    <div id="slide" style="">
+    <marquee
+style="z-index:2;
+position:absolute;
+left:8px;
+top:1px;
+font-family:
+Cursive;
+font-size:14pt;
+color:##ffcc00;
+height:400px;"
+scrollamount="25"
+direction="down">
+<img src="cursor1.png" height="80">
+     </marquee>
+	 <marquee
+style="z-index:2;
+position:absolute;
+left:179px;
+top:1px;
+font-family:
+Cursive;
+font-size:14pt;
+color:##ffcc00;
+height:400px;"
+scrollamount="25"
+direction="down">
+<img src="cursor2.png" height="80">
+     </marquee>
+	 <marquee
+style="z-index:2;
+position:absolute;
+left:104px;
+top:1px;
+font-family:
+Cursive;
+font-size:14pt;
+color:##ffcc00;
+height:400px;"
+scrollamount="25"
+direction="down">
+<img src="hook.png" height="80">
      </marquee>
     
     <div id="show" >
-      <img id="img1"  src="cursor1.png" >
-      <img id="img2"  src="hook.png" >
-      <img id="img3"  src="cursor2.png" >
+      <img id="img1" src="cursor1.png" >
+      <img id="img2" src="hook.png" >
+      <img id="img3" src="cursor2.png" >
     </div>
     <p></p>
-    
+    </div>
     
   </body>
 </html>
-
